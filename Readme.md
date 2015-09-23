@@ -1,4 +1,4 @@
-Агрэст
+Агрэст [![Build Status](https://travis-ci.org/ftdebugger/agrest.svg?branch=master)](https://travis-ci.org/ftdebugger/agrest)
 ======
 
 > Якім будзе тваё першае слова на роднай мове?
