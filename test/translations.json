@@ -1,0 +1,13 @@
+{
+    "test_sprintf": "%d out of %d",
+    "test_label": "label",
+    "test_plural": [
+        "__count__ user",
+        "__count__ users"
+    ],
+    "test_nested": {
+        "abc": {
+            "cde": "nested_value"
+        }
+    }
+}
