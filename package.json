@@ -1,6 +1,6 @@
 {
   "name": "agrest",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simply stupid i18n library",
   "main": "index.js",
   "scripts": {
