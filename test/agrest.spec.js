@@ -20,6 +20,7 @@ describe('agrest', function () {
     });
 
     it('plural translation', function () {
+        expect(translate('test_plural', {count: 0})).to.equal('0 users');
         expect(translate('test_plural', {count: 1})).to.equal('1 user');
         expect(translate('test_plural', {count: 2})).to.equal('2 users');
     });

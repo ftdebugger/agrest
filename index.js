@@ -20,7 +20,7 @@ var agrest = function (translations, {language = 'en', plurals = {}} = {}) {
         let translated = simpleTranslate(key);
 
         if (params) {
-            if (params.count) {
+            if (params.hasOwnProperty('count')) {
                 translated = translated[plural(params.count)];
             }
 
