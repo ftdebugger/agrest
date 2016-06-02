@@ -1,6 +1,6 @@
 import {expect} from 'chai';
 
-import {agrest} from '../index'
+import {agrest} from '../lib/agrest'
 import translations from './translations.json';
 
 describe('agrest', function () {

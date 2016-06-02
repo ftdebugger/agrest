@@ -15,15 +15,13 @@ Usage
 
 ```js
 import {agrest} from 'agrest';
+import en from 'agrest/lib/plural/en';
+import ru from 'agrest/lib/plural/ru';
 
 $.getJSON('/assets/i18n/en.json').then(translations => {
     window.translate = agrest(translations, {
         language: 'en',
-        plurals: {
-            en: (n) => Number(n != 1),
-            ru: (n) => Number(n % 10 == 1 && n % 100 != 11 ? 0 : n % 10 >= 2 && n % 10 <= 4 && 
-                (n % 100 < 10 || n % 100 >= 20) ? 1 : 2)
-        }
+        plurals: {en, ru}
     });
     
     translate('simple_key');
