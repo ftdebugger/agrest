@@ -8,7 +8,7 @@ Simply stupid i18n library
 Installation
 ============
 
-npm install --save agrest
+    npm install --save agrest
 
 Usage
 =====
