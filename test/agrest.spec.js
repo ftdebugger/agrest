@@ -15,17 +15,21 @@ describe('agrest', function () {
         });
     });
 
-    it('simple translation', function () {
+    it('supports simple translation', function () {
         expect(translate('test_label')).to.equal('label');
     });
 
-    it('plural translation', function () {
+    it('supports simple translation with `count` key', function() {
+        expect(translate('test_label', {count: 0})).to.equal('label');
+    });
+
+    it('supports plural translation', function () {
         expect(translate('test_plural', {count: 0})).to.equal('0 users');
         expect(translate('test_plural', {count: 1})).to.equal('1 user');
         expect(translate('test_plural', {count: 2})).to.equal('2 users');
     });
 
-    it('plural nested', function () {
+    it('supports plural nested', function () {
         expect(translate('test_nested.abc.cde')).to.equal('nested_value');
     });
 
