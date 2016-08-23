@@ -6,7 +6,10 @@
   "scripts": {
     "test": "mocha --compilers js:babel/register",
     "watch": "mocha --watch --compilers js:babel/register",
-    "es5": "mkdir -p es5 && babel lib/agrest.js -s inline -m umd --module-id agrest -o es5/agrest.js",
+    "es5:plural": "babel -s inline -d es5/plural -m common lib/plural",
+    "es5:detect": "babel -s inline -o es5/detect.js -m common lib/detect.js",
+    "es5:agrest": "babel -s inline -o es5/agrest.js -m umd --module-id agrest lib/agrest.js",
+    "es5": "npm run es5:plural && npm run es5:detect && npm run es5:agrest",
     "build": "npm run es5 && uglifyjs es5/agrest.js -o es5/agrest.min.js --mangle --screw-ie8 -c join_vars,unsafe,pure_getters",
     "prepublish": "npm run build"
   },
